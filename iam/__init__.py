@@ -182,3 +182,8 @@ UserModel.metadata.create_all(engine, checkfirst=True)
 GroupModel.metadata.create_all(engine, checkfirst=True)
 ResourceModel.metadata.create_all(engine, checkfirst=True)
 PermissionModel.metadata.create_all(engine, checkfirst=True)
+
+
+class Cowbell:
+    def __init__(self, more=True):
+        self.more = more
