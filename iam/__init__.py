@@ -5,6 +5,7 @@ from base64 import urlsafe_b64encode
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session, registry
 from iam.models import (
+    mapper_registry,
     user as UserModel,
     group as GroupModel,
     resource as ResourceModel,
@@ -20,7 +21,7 @@ from iam.schema import (
 
 engine = create_engine('sqlite:///iam.db', echo=True)
 session = scoped_session(sessionmaker(bind=engine))
-mapper_registry = registry()
+
 
 
 class User:
