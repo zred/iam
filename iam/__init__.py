@@ -178,7 +178,7 @@ class Permission:
 mapper_registry.map_imperatively(Permission, PermissionModel)
 
 
-UserModel.create_table(engine, checkfirst=True)
-GroupModel.create_table(engine, checkfirst=True)
-ResourceModel.create_table(engine, checkfirst=True)
-PermissionModel.create_table(engine, checkfirst=True)
+UserModel.metadata.create_all(engine, checkfirst=True)
+GroupModel.metadata.create_all(engine, checkfirst=True)
+ResourceModel.metadata.create_all(engine, checkfirst=True)
+PermissionModel.metadata.create_all(engine, checkfirst=True)
