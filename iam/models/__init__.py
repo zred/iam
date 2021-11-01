@@ -25,7 +25,7 @@ group = sa.Table(
     sa.Column('name', sa.String(64)),
     sa.Column('created', sa.DateTime),
     sa.Column('active', sa.Boolean),
-    sa.Column('users', sa.ForeignKey('user.id'), many=True),
+    sa.Column('users', sa.ForeignKey('user.id')),
 )
 
 
@@ -35,7 +35,7 @@ resource = sa.Table(
     sa.Column('id', sa.String(24), primary_key=True),
     sa.Column('name', sa.String(64)),
     sa.Column('owner', sa.ForeignKey('user.id')),
-    sa.Column('permissions', sa.ForeignKey('permission.id'), many=True),
+    sa.Column('permissions', sa.ForeignKey('permission.id')),
     sa.Column('created', sa.DateTime),
     sa.Column('active', sa.Boolean),
 )
