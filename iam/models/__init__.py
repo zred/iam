@@ -1,5 +1,8 @@
 import sqlalchemy as sa
-from iam import mapper_registry
+from sqlalchemy.orm import registry
+
+
+mapper_registry = registry()
 
 
 user = sa.Table(
